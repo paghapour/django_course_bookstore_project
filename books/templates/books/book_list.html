@@ -1,8 +1,6 @@
 {% extends '_base.html' %}
 
-{% block page_title %}
-    لیست کتاب ها
-{% endblock %}
+{% block page_title %}لیست کتاب ها{% endblock %}
 
 {% block content %}
     {% for book in books %}
@@ -10,4 +8,5 @@
         <p>{{ book.description }}</p>
         <br>
     {% endfor %}
+    <a href="{% url 'book_create' %}">اضافه کردن کتاب</a>
 {% endblock %}
